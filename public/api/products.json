@@ -1,0 +1,9 @@
+[
+  {"id":"1","sku":"KB-001","name":"Bàn phím cơ Keychron K2","description":"Layout 75%, kết nối Bluetooth và USB-C.","price":2190000,"currency":"VND","stockQuantity":18,"isActive":true},
+  {"id":"2","sku":"MS-014","name":"Chuột Logitech MX Master 3S","description":"Chuột công thái học, cảm biến 8K DPI.","price":2490000,"currency":"VND","stockQuantity":9,"isActive":true},
+  {"id":"3","sku":"MN-027","name":"Màn hình Dell UltraSharp 27”","description":"Độ phân giải 4K, tấm nền IPS, USB-C.","price":12990000,"currency":"VND","stockQuantity":6,"isActive":true},
+  {"id":"4","sku":"HP-008","name":"Tai nghe Sony WH-1000XM5","description":"Chống ồn chủ động và pin 30 giờ.","price":7990000,"currency":"VND","stockQuantity":12,"isActive":true},
+  {"id":"5","sku":"ST-042","name":"Giá đỡ laptop nhôm","description":"Điều chỉnh độ cao, phù hợp laptop 11–17 inch.","price":690000,"currency":"VND","stockQuantity":31,"isActive":true},
+  {"id":"6","sku":"WB-019","name":"Webcam Logitech Brio 500","description":"Hình ảnh Full HD, tự động cân bằng sáng.","price":2890000,"currency":"VND","stockQuantity":0,"isActive":false},
+  {"id":"7","sku":"MC-033","name":"Microphone HyperX SoloCast","description":"Micro USB cardioid dành cho họp và streaming.","price":1390000,"currency":"VND","stockQuantity":15,"isActive":true}
+]
