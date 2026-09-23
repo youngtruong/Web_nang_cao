@@ -1,14 +1,17 @@
 import { useEffect } from 'react';
-import { ChevronLeft, ChevronRight, PackageCheck } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Heart, PackageCheck } from 'lucide-react';
 import { useAppDispatch, useAppSelector } from '@/app/hooks';
 import { Button } from '@/components/common/Button';
 import { usePagination } from '@/hooks/usePagination';
 import { addItem } from '@/features/cart/cartSlice';
 import { fetchProducts } from './productsSlice';
+import { useFavoritesStore } from '@/features/favorites/favoritesStore';
 
 export function ProductList() {
   const dispatch = useAppDispatch();
   const { items, status, error } = useAppSelector((state) => state.products);
+  const favoriteItems = useFavoritesStore((state) => state.items);
+  const toggleFavorite = useFavoritesStore((state) => state.toggleFavorite);
   const { currentPage, totalPages, currentItems, nextPage, prevPage, goToPage } = usePagination(items, 3);
 
   useEffect(() => {
@@ -35,9 +38,25 @@ export function ProductList() {
             <article key={product.id} className="flex min-h-64 flex-col rounded-xl border border-gray-200 bg-white p-5 shadow-sm dark:border-gray-700 dark:bg-gray-800">
               <div className="mb-5 flex items-start justify-between gap-3">
                 <span className="rounded-md bg-primary-50 px-2.5 py-1 text-xs font-semibold text-primary-700 dark:bg-primary-950 dark:text-primary-300">{product.sku}</span>
-                <span className={`text-xs font-medium ${product.isActive ? 'text-emerald-600' : 'text-gray-400'}`}>
-                  {product.isActive ? `Còn ${product.stockQuantity}` : 'Hết hàng'}
-                </span>
+                <div className="flex items-center gap-2">
+                  <span className={`text-xs font-medium ${product.isActive ? 'text-emerald-600' : 'text-gray-400'}`}>
+                    {product.isActive ? `Còn ${product.stockQuantity}` : 'Hết hàng'}
+                  </span>
+                  {(() => {
+                    const isFavorite = favoriteItems.some((item) => item.id === product.id);
+                    return (
+                      <button
+                        type="button"
+                        onClick={() => toggleFavorite(product)}
+                        aria-label={`${isFavorite ? 'Bỏ' : 'Thêm'} ${product.name} ${isFavorite ? 'khỏi' : 'vào'} danh sách yêu thích`}
+                        aria-pressed={isFavorite}
+                        className="rounded-full p-1.5 text-rose-600 transition-colors hover:bg-rose-50 focus:outline-none focus:ring-2 focus:ring-rose-500 dark:hover:bg-rose-950"
+                      >
+                        <Heart aria-hidden="true" className={`h-5 w-5 ${isFavorite ? 'fill-current' : ''}`} />
+                      </button>
+                    );
+                  })()}
+                </div>
               </div>
               <PackageCheck aria-hidden="true" className="mb-4 h-8 w-8 text-primary-500" />
               <h3 className="text-lg font-semibold">{product.name}</h3>

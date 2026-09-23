@@ -2,6 +2,7 @@ import React from 'react';
 import { Accordion } from '@/components/common/Accordion';
 import { ProductList } from '@/features/products/ProductList';
 import { CartSummary } from '@/features/cart/CartSummary';
+import { FavoritesList } from '@/features/favorites/FavoritesList';
 
 export const HomePage: React.FC = () => {
 
@@ -31,6 +32,7 @@ export const HomePage: React.FC = () => {
       </section>
 
       <ProductList />
+      <FavoritesList />
       <CartSummary />
     </div>
   );

@@ -49,3 +49,12 @@ src/
    ```bash
    npm run build
    ```
+
+## Nhận xét: Zustand so với Redux Toolkit
+
+- Zustand cần rất ít mã cấu hình, nên phù hợp với state yêu thích nhỏ và độc lập.
+- Component có thể dùng store trực tiếp mà không cần Provider, slice hay action creator.
+- Selector của Zustand giúp component chỉ đăng ký phần state cần dùng.
+- Redux Toolkit có cấu trúc và luồng action rõ ràng hơn khi nghiệp vụ phát triển phức tạp.
+- Redux DevTools và middleware của Redux Toolkit thuận tiện hơn cho việc theo dõi, kiểm tra luồng cập nhật.
+- Với tính năng này, Zustand gọn hơn; nếu cần xử lý bất đồng bộ và nhiều state liên quan, Redux Toolkit dễ mở rộng hơn.
