@@ -8,6 +8,11 @@ export const HomePage: React.FC = () => {
 
   return (
     <div className="space-y-12 py-6 sm:py-10">
+      <section className="mx-auto max-w-3xl rounded-xl border border-blue-200 bg-blue-50 p-5 dark:border-blue-800 dark:bg-gray-800">
+        <h2 className="text-lg font-semibold text-gray-950 dark:text-white">Buổi 5 · Tối ưu hiệu năng React</h2>
+        <p className="mt-2 text-gray-600 dark:text-gray-300">So sánh trang quản lý 10.000 sản phẩm trước và sau virtualization, memoization.</p>
+        <a className="mt-3 inline-block font-semibold text-blue-700 dark:text-blue-300" href="/performance.html?mode=after">Mở Product Lab →</a>
+      </section>
       <section aria-labelledby="accordion-heading" className="mx-auto max-w-3xl">
         <div className="mb-6">
           <p className="mb-2 text-sm font-semibold uppercase tracking-widest text-primary-600 dark:text-primary-400">Compound component</p>

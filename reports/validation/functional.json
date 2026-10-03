@@ -1,0 +1,38 @@
+[
+  {
+    "mode": "before",
+    "mounted": 10000,
+    "selection": {
+      "rowRenders": 10000,
+      "filterComputations": 1
+    },
+    "checks": [
+      "scroll to product 10000",
+      "selection survives scroll",
+      "search",
+      "category",
+      "price sort",
+      "clear selection",
+      "mobile overflow",
+      "no console errors"
+    ]
+  },
+  {
+    "mode": "after",
+    "mounted": 12,
+    "selection": {
+      "rowRenders": 1,
+      "filterComputations": 0
+    },
+    "checks": [
+      "scroll to product 10000",
+      "selection survives scroll",
+      "search",
+      "category",
+      "price sort",
+      "clear selection",
+      "mobile overflow",
+      "no console errors"
+    ]
+  }
+]
