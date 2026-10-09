@@ -84,3 +84,18 @@ node scripts/validate-performance.mjs /duong-dan/node_modules/puppeteer-core/lib
 ```
 
 Script này chạy trên bản production ở port 4173, lưu kết quả và ảnh desktop/mobile trong `reports/validation/`. Tham số `&debug` bật bộ đếm render/phép lọc, không dùng trong Lighthouse.
+
+## Buổi 6 — Kiểm thử frontend
+
+Bộ 29 test unit và integration cho sản phẩm/giỏ hàng, có API mock bất đồng bộ.
+
+```bash
+npm run test:coverage
+npm run test:typecheck
+```
+
+Kết quả: statements/functions/lines 100%, branches 98,14%. Jest kiểm tra ngưỡng tối thiểu 70% cho cả bốn chỉ số.
+
+- [Báo cáo kiểm thử và danh sách test](reports/testing/BAO_CAO_KIEM_THU.md)
+- [Ảnh coverage để nộp](reports/testing/coverage.png)
+- [Báo cáo HTML](reports/testing/coverage/index.html)
