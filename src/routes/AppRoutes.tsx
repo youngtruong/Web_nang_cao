@@ -1,8 +1,8 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { MainLayout } from '@/layouts/MainLayout';
-import { HomePage } from '@/pages/HomePage';
-import { NotFoundPage } from '@/pages/NotFoundPage';
+import { HomePage } from '@/views/HomePage';
+import { NotFoundPage } from '@/views/NotFoundPage';
 
 export const AppRoutes: React.FC = () => {
   return (

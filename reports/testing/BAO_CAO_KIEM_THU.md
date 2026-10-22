@@ -47,3 +47,9 @@ node scripts/capture-coverage.mjs /duong/dan/puppeteer-core/lib/esm/puppeteer/pu
 Script chụp trực tiếp báo cáo HTML của Jest bằng Chrome headless; có thể đặt `CHROME_PATH` nếu Chrome ở vị trí khác.
 
 Build production và kiểm tra kiểu test đều thành công.
+
+## Bổ sung Buổi 7–8 — NextAuth và SEO (22/10/2026)
+
+Jest hiện có **32 test / 4 suite đạt**; 3 test mới xác minh page và Server Action tự kiểm tra session/role khi không qua Middleware. Build Next.js, build Vite và hai bước kiểm tra kiểu đều thành công.
+
+Xem [báo cáo ngắn: sơ đồ bảo vệ, cấu hình và Lighthouse trước/sau](../BAO_CAO_NEXTAUTH_SEO.md), [kết quả HTTP](next-auth-results.json) và [kết quả trình duyệt](next-ui-results.json). GitHub OAuth đã tích hợp nhưng chưa kiểm thử đầu cuối vì thiếu Client ID/Secret thật. Các tỷ lệ coverage ở phần trên là kết quả lưu của bộ kiểm thử Buổi 6.

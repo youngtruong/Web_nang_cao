@@ -1,0 +1,14 @@
+{
+  "time": "2026-10-22T03:01:29.734Z",
+  "checks": [
+    "anonymous protected routes redirect to login",
+    "invalid credentials rejected",
+    "user session typed fields, dashboard allowed, admin denied",
+    "admin page allowed",
+    "captured admin Server Action rejects anonymous/user; admin succeeds",
+    "forged JWT rejected",
+    "both public pages: canonical, Open Graph, JSON-LD, generated image",
+    "signout clears session"
+  ],
+  "oauth": "Not exercised: requires GitHub client credentials"
+}

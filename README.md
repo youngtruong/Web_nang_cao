@@ -1,3 +1,7 @@
+> **Buổi 7–8 — Next.js / NextAuth / SEO**: entry mặc định hiện là Next.js App Router. Chạy `npm run dev` hoặc `npm run build` rồi `npm start`. Cấu hình `.env.local` theo [báo cáo NextAuth và SEO](reports/BAO_CAO_NEXTAUTH_SEO.md) trước khi đăng nhập. Có GitHub OAuth, email/mật khẩu, vai trò admin/user và SEO cho `/`, `/about`.
+>
+> Các phần bài React/Vite bên dưới dùng `npm run dev:vite`, `npm run build:vite` và `npm run preview`. Mã giao diện React cũ ở `src/views`.
+
 # Starter Base Project - Lập Trình Web Nâng Cao
 
 Khung dự án Single Page Application (SPA) tinh gọn xây dựng bằng **React + TypeScript + Vite + Tailwind CSS**.
